@@ -1,89 +1,55 @@
 
-function checkCashRegister(price, cash, cid) {
-    console.log("New test:");
-    var change = cash - price;
-    var cidObj = {};
-    var changeArr = [];
+function updateInventory(arr1, arr2) {
+    // All inventory must be accounted for or you're fired!
 
-    for (var i = 0; i <= cid.length - 1; i++) {
-        cidObj[cid[i][0]] = cid[i][1];
+    var curInvObj = {};
+    var newInvObj = {};
+    var retArr = [];
+
+    for (var i = 0; i < arr1.length; i++){
+        curInvObj[arr1[i][1]] = arr1[i][0];
+    }
+    for (var i = 0; i < arr2.length; i++){
+        newInvObj[arr2[i][1]] = arr2[i][0];
     }
 
-    var change100 = new Change("ONE HUNDRED", cidObj["ONE HUNDRED"]);
-    var change20 = new Change("TWENTY", cidObj["TWENTY"]);
-    var change10 = new Change("TEN", cidObj["TEN"]);
-    var change5 = new Change("FIVE", cidObj["FIVE"]);
-    var change1 = new Change("ONE", cidObj["ONE"]);
-    var changeQuart = new Change("QUARTER", cidObj["QUARTER"]);
-    var changeDime = new Change("DIME", cidObj["DIME"]);
-    var changeNickel = new Change("NICKEL", cidObj["NICKEL"]);
-    var changePenny = new Change("PENNY", cidObj["PENNY"]);
-
-    var leftTotal = [change100.left, change20.left, change10.left, change5.left, change1.left,
-        changeQuart.left, changeDime.left, changeNickel.left, changePenny.left].reduce(function (prev, current) {
-            return prev + current;
-        });
-
-
-    if (change === leftTotal)
-        return "Closed";
-
-    var retMoney = change100.takeMoney(change);
-    retMoney = change20.takeMoney(retMoney);
-    retMoney = change10.takeMoney(retMoney);
-    retMoney = change5.takeMoney(retMoney);
-    retMoney = change1.takeMoney(retMoney);
-    retMoney = changeQuart.takeMoney(retMoney);
-    retMoney = changeDime.takeMoney(retMoney);
-    retMoney = changeNickel.takeMoney(retMoney);
-    retMoney = changePenny.takeMoney(retMoney);
-
-    if (retMoney > 0)
-        return "Insufficient Funds";
-
-    [change100, change20, change10, change5, change1, changeQuart, changeDime, changeNickel, changePenny].forEach(function(val){
-        if(val.take !== 0){
-            changeArr.push([val.unitAlpha, Number.parseFloat(val.take)]);
-            console.log(val + " element is: " + val.unitAlpha + ", " + val.take);
+    for(var prop in newInvObj){
+        if(curInvObj.hasOwnProperty(prop)){
+            curInvObj[prop] = curInvObj[prop] + newInvObj[prop];
+        } else {
+            curInvObj[prop] = newInvObj[prop];
         }
+    }
+
+    for(var prop in curInvObj) {
+        retArr.push(prop);
+    }
+    var sortedArr = retArr.sort();
+
+    retArr = sortedArr.map(function(prop){
+        return [curInvObj[prop], prop];
     });
 
-    return changeArr;
+    return retArr;
 }
 
-var UnitLookup = {
-    "ONE HUNDRED": 100,
-    "TWENTY": 20,
-    "TEN": 10,
-    "FIVE": 5,
-    "ONE": 1,
-    "QUARTER": 0.25,
-    "DIME": 0.1,
-    "NICKEL": 0.05,
-    "PENNY": 0.01
-};
+// Example inventory lists
+var curInv = [
+    [21, "Bowling Ball"],
+    [2, "Dirty Sock"],
+    [1, "Hair Pin"],
+    [5, "Microphone"]
+];
 
-function Change(unitAlpha, left) {
-    this.unitAlpha = unitAlpha;
-    this.unit = UnitLookup[unitAlpha];
-    this.left = left;
-    this.take = 0;
-    this.takeMoney = function (num) {
-        if (num < this.unit) {
-            return num;
-        }
-        var wantToTake = (Math.floor(num / this.unit) * this.unit).toFixed(2);
-        if (wantToTake >= this.left) {
-            this.take = this.left;
-            this.left = 0;
-            return (num - this.take).toFixed(2);
-        } else {
-            this.take = wantToTake;
-            this.left = (this.left - this.take).toFixed(2);
-            return (num - wantToTake).toFixed(2);
-        }
-    };
-}
+var newInv = [
+    [2, "Hair Pin"],
+    [3, "Half-Eaten Apple"],
+    [67, "Bowling Ball"],
+    [7, "Toothpaste"]
+];
+
+updateInventory(curInv, newInv);
+
 $(document).ready(function () {
     // Example cash-in-drawer array:
     // [["PENNY", 1.01],
@@ -96,6 +62,6 @@ $(document).ready(function () {
     // ["TWENTY", 60.00],
     // ["ONE HUNDRED", 100.00]]
     console.log(
-        checkCashRegister(19.50, 20.00, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.10], ["QUARTER", 4.25], ["ONE", 90.00], ["FIVE", 55.00], ["TEN", 20.00], ["TWENTY", 60.00], ["ONE HUNDRED", 100.00]])
+        updateInventory(curInv, newInv)
     );
 });
