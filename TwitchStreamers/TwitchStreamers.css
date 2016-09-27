@@ -38,6 +38,8 @@ body{
     background-color: #eee;
     height: 25px;
     margin-bottom: 10px;
+
+   
 }
 
 .tagTxt{
@@ -82,4 +84,11 @@ body{
 }
 .body_block{
     background-color: #316385;
+}
+
+.tagOpaque{
+    margin-left: 95px;
+}
+.tagDispaly{
+    display: none;
 }
