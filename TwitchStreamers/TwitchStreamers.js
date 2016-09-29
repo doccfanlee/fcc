@@ -28,4 +28,22 @@ $(document).ready(function () {
             "margin-left": "95px",
         }, 500);
     });
+
+    getInfo();
 });
+
+function getInfo() {
+    var dataGet = {};
+    dataGet.Accept = 'application/vnd.twitchtv.v3+json';
+    $.ajax({
+        method: "GET",
+        url: "https://api.twitch.tv/kraken/channels/test_channel",
+        dataType: "jsonp",
+        data: dataGet,
+    }).done(function (json) {
+        console.log(json);
+
+    }).fail(function () {
+        console.log("failed.");
+    });
+}
