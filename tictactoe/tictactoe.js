@@ -91,7 +91,7 @@ $(document).ready(function () {
     }
 
     function AICompute() {
-        // Calcuate next step
+
         AllPawns = PlayerPawns.concat(AIPawns);
         var PawnToGo = [];
         [0, 1, 2, 3, 4, 5, 6, 7, 8].forEach(function (element) {
@@ -105,8 +105,13 @@ $(document).ready(function () {
             ShowWonMessage("We become a draw play!");
         }
         var NextPawn = PawnToGo.find(function (element) {
-            return IsWon(AIPawns.concat(element), Won);
+            return IsWon(PlayerPawns.concat(element), Won);
         });
+        if (NextPawn === undefined) {
+            NextPawn = PawnToGo.find(function (element) {
+                return IsWon(AIPawns.concat(element), Won);
+            });
+        }
         if (NextPawn === undefined) {
             return PawnToGo[0];
         }
