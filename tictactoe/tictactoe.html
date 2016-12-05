@@ -14,25 +14,67 @@
 </head>
 
 <body>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+  Launch demo modal
+</button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Please Select Your Pawn:</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="center-block">
+                                <canvas id="canvasCircle"></canvas>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="center-block">
+                                <canvas id="canvasRect"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="container">
         <div class=" mainboard center-block">
             <div class="grid" id="leftTopGrid">
+                <!--<canvas id="canvasLT"></canvas>-->
             </div>
             <div class="grid" id="topGrid">
+                <!--<canvas id="canvasTop"></canvas>-->
             </div>
             <div class="grid" id="rightTopGrid">
+                <!--<canvas id="canvasRT"></canvas>-->
             </div>
             <div class="grid" id="leftMiddleGrid">
+                <!--<canvas id="canvasLeft"></canvas>-->
             </div>
             <div class="grid" id="middleGrid">
+                <!--<canvas id="canvasMiddle"></canvas>-->
             </div>
             <div class="grid" id="rightMiddleGrid">
+                <!--<canvas id="canvasRight"></canvas>-->
             </div>
             <div class="grid" id="leftBottomGrid">
+                <!--<canvas id="canvasLB"></canvas>-->
             </div>
             <div class="grid" id="bottomGrid">
+                <!--<canvas id="canvasBottom"></canvas>-->
             </div>
             <div class="grid" id="rightBottomGrid">
+                <!--<canvas id="canvasRB"></canvas>-->
             </div>
         </div>
     </div>
