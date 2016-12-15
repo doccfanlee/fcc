@@ -1,3 +1,4 @@
+/**orignal version
 function destroyer(arr) {
   // Remove all the values
   var args = Array.prototype.slice.call(arguments, 1);
@@ -11,4 +12,15 @@ function destroyer(arr) {
   });
   console.log("retArr is " + retArr);
   return retArr;
+}
+*/
+
+function destroyer(arr) {
+  // Remove all the values
+ var args = Array.prototype.slice.call(arguments);
+  args.splice(0, 1);
+  console.log(arr);
+  return arr.filter(function(element) {
+    return args.indexOf(element) === -1;
+  });
 }
