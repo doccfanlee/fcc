@@ -13,22 +13,42 @@
 </head>
 
 <body>
-<audio id="audio1" src="audio/simonSound1.mp3"></audio>
-<audio id="audio2" src="audio/simonSound2.mp3"></audio>
-<audio id="audio3" src="audio/simonSound3.mp3"></audio>
-<audio id="audio4" src="audio/simonSound4.mp3"></audio>
-    <div class="outer">
-        <div class="roundBtnRow">
-            <div class="roundBtn redBtn" id="redBtnId"></div>
-            <div class="roundBtn greenBtn" id="greenBtnId"></div>
-        </div>
-        <div class="roundBtnRow">
-            <div class="roundBtn blueBtn" id="blueBtnId"></div>
-            <div class="roundBtn yellowBtn" id="yellowBtnId"></div>
-        </div>
+    <audio id="audio1" src="audio/simonSound1.mp3"></audio>
+    <audio id="audio2" src="audio/simonSound2.mp3"></audio>
+    <audio id="audio3" src="audio/simonSound3.mp3"></audio>
+    <audio id="audio4" src="audio/simonSound4.mp3"></audio>
+    <div id="outer" class="TurnOff">
+
+        <div class="roundBtn redBtn mainBtnShadow" id="audio1Btn"></div>
+        <div class="roundBtn greenBtn mainBtnShadow" id="audio2Btn"></div>
+        <div class="roundBtn blueBtn mainBtnShadow" id="audio3Btn"></div>
+        <div class="roundBtn yellowBtn mainBtnShadow" id="audio4Btn"></div>
 
         <div class="centerRegion">
             <p id="SimonTitle">Simon Game</p>
+            <div class="centerBot">
+                <div id="count">
+                    <div id="countDisplay">
+                        <div id="countText"></div>
+                    </div>
+                    <p class="label">COUNT</p>
+                </div>
+                <div id="start">
+                    <div id="startBtn" class="btnShadow"></div>
+                    <p class="label">START</p>
+                </div>
+                <div id="strict">
+                    <div id="strictBtn" class="btnShadow"></div>
+                    <p class="label">STRICT</p>
+                </div>
+            </div>
+            <div id="OnOff">
+                <div id="OFFLabel">OFF</div>
+                <div id="OnOffSwitch">
+                    <div id="OnOffSwitchBtn"></div>
+                </div>
+                <div id="ONLabel">ON</div>
+            </div>
         </div>
     </div>
 
