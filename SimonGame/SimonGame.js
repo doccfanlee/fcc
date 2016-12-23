@@ -2,7 +2,7 @@
 $(document).ready(function () {
     var AIAudioPlayOrder = [];
     var PlayerAudioPlayOrder = [];
-    var WINCOUNT = 4;
+    var WINCOUNT = 20;
     var OnOff = false;
     var IsStrict = false;
     var IsStart = false;
