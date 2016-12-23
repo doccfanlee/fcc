@@ -1,0 +1,44 @@
+body{
+    font-size: 14px;
+}
+h1,h2,footer{
+    text-align: center;
+}
+h1{
+    padding-top: 40px;
+    padding-bottom: 0;
+    font-size: 2.5em;
+    margin-bottom: 0;
+}
+h2{
+    font-size: 1.25em;
+}
+#timeLine>h2{
+    text-align: left;
+}
+#main {
+    background-color: #dddddd;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 50px;
+}
+#imageMain{
+    background-color: white;
+    margin: auto 40px;
+}
+
+#image >img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+#timeLine{
+    margin: auto 80px;
+}
+figure{
+    margin-bottom: 0;
+}
+figcaption{
+    margin: 0 40px;
+}
