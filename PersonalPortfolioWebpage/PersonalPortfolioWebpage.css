@@ -1,0 +1,35 @@
+* {
+    font-family: museo-slab,Georgia,"Times New Roman",Times,serif;
+    font-size: 16px;
+}
+h3 {
+    font-size: 1.3em;
+}
+.center-block {
+  float: none;  
+  display: block;  
+  margin-left: auto;  
+  margin-right: auto; 
+  padding: 30px;
+  background-color: #eee;
+}
+.portfolio {
+    margin: 10px;
+}
+.figcap{
+    margin-top: 5px;
+    text-align: left;
+}
+#about, #portfolio, #contact {
+    margin: 0px;
+    height: 40px;
+}
+footer {
+    margin-top: 20px;
+}
+.portfolio:hover {
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+#myPhoto{
+    margin:  20px 0;
+}
