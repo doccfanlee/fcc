@@ -17,7 +17,7 @@ $(document).ready(function(){
       $("#author").html('- '+authorJson);
       $("body").css("background-color",randomColor);
       $(".btn").css("background-color", randomColor);
-      //$("#btnTwitter").prop("href", "https://twitter.com/intent/tweet?text="+'"'+quoteJson+'"'+authorJson);
+      //$("#btnTwitter").attr("href", "https://twitter.com/intent/tweet?text="+'"'+quoteJson+'"'+authorJson);
     }).fail(function() {
         $("#quoteTxt").html("Fail to get JSON");});
    });
