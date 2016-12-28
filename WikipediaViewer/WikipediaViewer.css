@@ -1,4 +1,29 @@
+*{
+  font-family: museo-slab,Georgia,"Times New Roman",Times,serif;
+}
 #randomArticle {
-  font-size: 24px;
-  margin-top: 50px;
+  font-size: 1.3em;
+  margin-top: 5px;
+}
+.container{
+  margin-top: 20px;
+  width: 65%;
+}
+#wikiArticle{
+  padding: 5px 20px 5px 20px;
+  height: 430px;
+}
+
+.resultList{
+  margin: 10px;
+  font-size: 1.2em
+}
+#searchLabel{
+  color: gold;
+  font-size: 2em;
+  vertical-align: middle;
+}
+#footer{
+  position: relative;
+  bottom: 10px;
 }

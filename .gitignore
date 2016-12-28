@@ -8,3 +8,6 @@ ehthumbs_vista.db
 
 # test file
 test.html
+
+# node modules
+node_modules/
