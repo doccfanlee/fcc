@@ -25,3 +25,8 @@ function convert(str) {
     }
     return retStr;
 }
+
+/** another method */
+function convert(str) {
+    return str.replace(/&/gi, '&amp;').replace(/</gi, '&lt;').replace(/>/gi, '&gt;').replace(/"/gi, '&quot;').replace(/'/gi, '&apos;');
+}
