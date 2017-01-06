@@ -37,9 +37,7 @@ body{
 .tag{
     background-color: #eee;
     height: 25px;
-    margin-bottom: 10px;
-
-   
+    margin-bottom: 10px; 
 }
 
 .tagTxt{
@@ -90,7 +88,10 @@ body{
 
 .tagOpaque{
     margin-left: 95px;
+    -webkit-transition: margin 1s;
+    transition: margin 1s;
+    overflow: hidden;
 }
-.tagDispaly{
-    display: none;
+.tagOpaque:hover{
+    margin-left: 0px;
 }
