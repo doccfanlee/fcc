@@ -9,33 +9,43 @@
     <title>Wikipedia Viewer</title>
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="WikipediaViewer.css">
 </head>
 
 <body>
     <div class="container">
-        <div id="randomArticle" class="text-center">
-            <p><a href="https://en.wikipedia.org/wiki/Special:Random">Click here for a random article</a></p>
-        </div>
-        <form class="form-inline">
-
-            <input type="text" class="form-control" id="searchInput" placeholder="Search">
-           <button id="btn-search" class="btn btn-default"  type="button">Search</button>
-
-        </form>
-        <div id="wikiArticle">
-            <div id="content">Please input keywords.</div>
-        </div>
+            <form class="form-inline">
+                <div class="form-group">
+                    <label for="searchInput" id="searchLabel">Wiki Search</label>
+                    <input type="text" class="form-control" id="searchInput" placeholder="keywords">
+                </div>
+                <button id="btn-search" class="btn btn-default" type="button">Search</button>
+            </form>
+            <div id="randomArticle">
+                <p><a href="https://en.wikipedia.org/wiki/Special:Random">Click here for a random article</a></p>
+            </div>
+            <div id="wikiArticle">
+                <!--<div id="content">Please input keywords.</div>
+                <div class="resultList">Yahoo</div>
+                <div class="resultList">Yahoo</div>
+                <div class="resultList">Yahoo</div>
+                <div class="resultList">Yahoo</div>
+                <div class="resultList">Yahoo</div>
+                <div class="resultList">Yahoo</div>
+                <div class="resultList">Yahoo</div>
+                <div class="resultList">Yahoo</div>
+                <div class="resultList">Yahoo</div>
+                <div class="resultList">Yahoo</div>-->
+            </div>
+            <div id="footer">Made by DocCfanLee
+            </div>
     </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="http://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="
-        crossorigin="anonymous"></script>
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-        crossorigin="anonymous"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="WikipediaViewer.js"></script>
 </body>
 

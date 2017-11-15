@@ -1,0 +1,164 @@
+#outer {
+  position: relative;
+  width: 480px;
+  height: 480px;
+  margin: auto;
+  padding: 0px;
+  border: 0px;
+}
+
+.roundBtn {
+  display: block;
+  float:left;
+  padding: 0px;
+  margin: 0px;
+  width: 240px;
+  height: 240px;
+  z-index: 1;
+}
+.redBtn {
+  background-color: #ff0000;
+  border-top-left-radius: 100%;  
+}
+.greenBtn {
+  background-color: #00ff00;
+  border-top-right-radius: 100%;
+
+}
+.blueBtn {
+  background-color: #0000ff;
+  border-bottom-left-radius: 100%;
+
+}
+.yellowBtn {
+  background-color: #ffff00;
+  border-bottom-right-radius: 100%;
+}
+.mainBtnShadow{
+  box-shadow: inset 0 0 12em lightslategray;
+}
+.centerRegion {
+  position: absolute;
+  width: 240px;
+  height: 240px;
+  background-color: #eeeeee;
+  top: 25%;
+  left: 25%;
+  z-index: 3;
+  border-radius: 50%;
+}
+#SimonTitle{
+  text-align: center;
+  margin-top: 40px;
+  font-size: 24px;
+}
+.centerBot {
+  
+  width: 200px;
+  height: 80px;
+  border: 20px;
+  margin: auto;
+}
+#count {
+  display: inline-block;
+  width: 65px;
+  border: 0px;
+  padding: 0px;
+  margin: 0;
+}
+#countDisplay{
+  background-color: #ffffff;
+  border-radius: 10px;
+  width: 60px;
+  height: 40px;
+  border-width: 10px;
+  padding: 5px;
+  margin: 0;
+}
+#countText {
+  font-size: 34px;
+  text-align: center;
+  margin: 0px;
+}
+#start {
+  border-radius: 50%;
+  display: inline-block;
+  margin: auto;
+  padding: 0;
+  width: 55px;
+}
+#startBtn {
+  background-color: #009900;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  padding: 0px;
+  margin: 10px auto;
+}
+#strict {
+  border-radius: 50%;
+  display: inline-block;
+  padding: 0;
+  width: 55px;
+  margin: auto;
+}
+#strictBtn {
+  background-color: #990000;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  padding: 0px;
+  margin: 10px auto;
+  
+}
+.btnShadow {
+  box-shadow: inset 0 0 1em gold, 0 0 .5em gray;
+}
+.label {
+  text-align: center;
+  margin: 0;
+}
+.inlineDisplay{
+  display: inline-block;
+}
+#OnOff{
+  width: 200px;
+  height: 30px;
+  margin: 10px auto;
+}
+#OnOffSwitch{
+  display: inline-block;
+  width: 40px;
+  background-color: #999999;
+  border-radius: 5px;
+  border-color: brown;
+  border-style: solid;
+  border-width: 2px;
+  vertical-align: middle;
+}
+#OFFLabel{
+  display: inline-block;
+  margin: 0 0 0 50px;
+  vertical-align: middle;
+}
+#ONLabel {
+  display: inline-block;
+  margin: 0;
+  vertical-align: middle;
+}
+#OnOffSwitchBtn{
+  background-color: #ffdd00;
+  border-radius: 2px;
+  width: 20px;
+  height: 20px;
+  margin: 0px;
+  padding: 0px;
+  pointer-events: all;
+}
+.TurnOff{
+  pointer-events: none;
+}
+.TurnOn{
+  pointer-events: auto;
+  cursor: pointer;
+}

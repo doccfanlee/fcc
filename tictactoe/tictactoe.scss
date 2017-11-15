@@ -1,0 +1,57 @@
+$gridBorderWidth: 2px;
+
+.mainboard{
+  background-color: black;
+  width: 500px;
+  height: 500px;
+  margin-top: 5%;
+  padding: 0;
+  border-width: 10px;
+  border-style: solid;
+  border-color: black;
+}
+.center-block{
+  float:none;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+.grid {
+  float:left;
+  display: block;
+  background-color: black;
+  width: 160px;
+  height: 160px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: yellow;
+  margin: 0;
+  padding: 0;
+}
+#leftTopGrid {
+    border-width: 0 $gridBorderWidth $gridBorderWidth 0;
+}
+#topGrid {
+    border-width: 0 $gridBorderWidth $gridBorderWidth $gridBorderWidth;
+}
+#rightTopGrid {
+    border-width: 0 0 $gridBorderWidth $gridBorderWidth;
+}
+#leftMiddleGrid {
+    border-width: $gridBorderWidth $gridBorderWidth $gridBorderWidth 0;
+}
+#middleGrid {
+    border-width: $gridBorderWidth;
+}
+#rightMiddleGrid {
+    border-width: $gridBorderWidth 0 $gridBorderWidth $gridBorderWidth;
+}
+#leftBottomGrid {
+    border-width: $gridBorderWidth $gridBorderWidth 0 0;
+}
+#bottomGrid {
+    border-width: $gridBorderWidth $gridBorderWidth 0 $gridBorderWidth;
+}
+#rightBottomGrid {
+    border-width: $gridBorderWidth 0 0 $gridBorderWidth;
+}

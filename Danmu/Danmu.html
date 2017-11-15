@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Danmu</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="Danmu.css">
+</head>
+
+<body>
+    <h1 id="hello" class="text-primary text-center">Danmu</h1>
+    <div class="container center-block" style="width:900px" >
+        <div class="row">
+            <div class="col-md-12" id="MainScreen">
+                <canvas id="danmuCanvas" width="800" height="400"></canvas>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-offset-3 col-md-6">
+                <input type="text" id="inputText" placeholder="please input your Danmu...">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-offset-3 col-md-3">
+                <button type="button" class="btn btn-default" id="sendBtn">Send</button>
+            </div>
+            <div class="col-md-3">
+                <button type="button" class="btn btn-default" id="clearBtn">Clear</button>
+            </div>
+        </div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="Danmu.js"></script>
+</body>
+
+</html>

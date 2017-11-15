@@ -1,0 +1,56 @@
+.mainboard {
+  background-color: black;
+  width: 500px;
+  height: 500px;
+  margin-top: 5%;
+  padding: 0;
+  border-width: 10px;
+  border-style: solid;
+  border-color: black; }
+
+.center-block {
+  float: none;
+  display: block;
+  margin-right: auto;
+  margin-left: auto; }
+
+.grid {
+  float: left;
+  display: block;
+  background-color: black;
+  width: 160px;
+  height: 160px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: yellow;
+  margin: 0;
+  padding: 0; }
+
+#leftTopGrid {
+  border-width: 0 2px 2px 0; }
+
+#topGrid {
+  border-width: 0 2px 2px 2px; }
+
+#rightTopGrid {
+  border-width: 0 0 2px 2px; }
+
+#leftMiddleGrid {
+  border-width: 2px 2px 2px 0; }
+
+#middleGrid {
+  border-width: 2px; }
+
+#rightMiddleGrid {
+  border-width: 2px 0 2px 2px; }
+
+#leftBottomGrid {
+  border-width: 2px 2px 0 0; }
+
+#bottomGrid {
+  border-width: 2px 2px 0 2px; }
+
+#rightBottomGrid {
+  border-width: 2px 0 0 2px; }
+
+/*# sourceMappingURL=tictactoe.css.map */

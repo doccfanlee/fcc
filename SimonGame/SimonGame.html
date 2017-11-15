@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Simon Game</title>
+
+
+    <link rel="stylesheet" href="SimonGame.css">
+</head>
+
+<body>
+    <audio id="audio1" src="audio/simonSound1.mp3"></audio>
+    <audio id="audio2" src="audio/simonSound2.mp3"></audio>
+    <audio id="audio3" src="audio/simonSound3.mp3"></audio>
+    <audio id="audio4" src="audio/simonSound4.mp3"></audio>
+    <div id="outer" class="TurnOff">
+
+        <div class="roundBtn redBtn mainBtnShadow" id="audio1Btn"></div>
+        <div class="roundBtn greenBtn mainBtnShadow" id="audio2Btn"></div>
+        <div class="roundBtn blueBtn mainBtnShadow" id="audio3Btn"></div>
+        <div class="roundBtn yellowBtn mainBtnShadow" id="audio4Btn"></div>
+
+        <div class="centerRegion">
+            <p id="SimonTitle">Simon Game</p>
+            <div class="centerBot">
+                <div id="count">
+                    <div id="countDisplay">
+                        <div id="countText"></div>
+                    </div>
+                    <p class="label">COUNT</p>
+                </div>
+                <div id="start">
+                    <div id="startBtn" class="btnShadow"></div>
+                    <p class="label">START</p>
+                </div>
+                <div id="strict">
+                    <div id="strictBtn" class="btnShadow"></div>
+                    <p class="label">STRICT</p>
+                </div>
+            </div>
+            <div id="OnOff">
+                <div id="OFFLabel">OFF</div>
+                <div id="OnOffSwitch">
+                    <div id="OnOffSwitchBtn"></div>
+                </div>
+                <div id="ONLabel">ON</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <!--<script src="https://raw.githubusercontent.com/shinnn/AudioContext-Polyfill/master/audiocontext-polyfill.js">-->
+    <script src="SimonGame.js"></script>
+</body>
+
+</html>

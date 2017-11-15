@@ -1,0 +1,13 @@
+# Windows thumbnail cache files
+Thumbs.db
+ehthumbs.db
+ehthumbs_vista.db
+
+# Audio files
+*.mp3
+
+# test file
+test.html
+
+# node modules
+node_modules/
